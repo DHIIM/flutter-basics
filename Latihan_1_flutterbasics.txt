@@ -1,0 +1,157 @@
+soal 
+
+1.	Bagaimana cara membuat project Flutter menggunakan terminal/cmd?
+2.	Apa aturan dalam memberikan nama project pada Flutter?
+3.	Apa saja folder yang secara khusus disiapkan oleh Flutter untuk menjalankan aplikasi pada platform tertentu?
+4.	Apa fungsi dari folder .dart_tools dan .idea?
+5.	Bagaimana cara membuka project Flutter menggunakan Visual Studio Code?
+6.	Mengapa kita perlu memastikan Android SDK terinstall untuk menjalankan aplikasi Flutter di sistem operasi Android?
+7.	Apa langkah-langkah untuk mengatasi masalah "Android Toolchain error" pada perintah flutter doctor?
+8.	Bagaimana cara menambahkan Android SDK Command-line tools melalui Android Studio?
+9.	Apa fungsi dari file .gitignore dalam struktur folder Flutter?
+10.	Mengapa file pubspec.yaml sangat penting dalam pengembangan aplikasi Flutter?
+11.	Apa yang dimaksud dengan widget dalam konteks Flutter?
+12.	Bagaimana pewarisan (inheritance) digunakan dalam pembuatan widget Flutter?
+13.	Apa peran widget MaterialApp dalam pembuatan aplikasi Flutter?
+14.	Mengapa kita membutuhkan fungsi runApp untuk menjalankan aplikasi Flutter?
+15.	Apa kegunaan widget Scaffold dalam struktur aplikasi Flutter?
+16.	Bagaimana cara menambahkan app bar dan body pada widget Scaffold?
+17.	Apa perbedaan antara Stateless Widget dan Stateful Widget?
+18.	Mengapa Stateful Widget disebut memiliki state internal?
+19.	Berikan contoh penggunaan Stateless Widget dalam pembuatan aplikasi Flutter.
+20.	Berikan contoh penggunaan Stateful Widget dalam pembuatan aplikasi Flutter beserta alasan penggunaannya.
+
+jawaban
+Tentu, berikut adalah jawaban untuk pertanyaan-pertanyaan tersebut dengan cara yang berbeda:
+
+1. Cara membuat project Flutter menggunakan terminal/cmd:
+   Untuk memulai project Flutter melalui terminal/cmd, Anda bisa mengetikkan perintah `flutter create nama_project`, dengan `nama_project` sebagai nama yang Anda pilih untuk project tersebut.
+
+2. Aturan dalam memberikan nama project pada Flutter:
+   Nama project di Flutter sebaiknya mengikuti konvensi penamaan variabel dalam Dart, yang menggunakan huruf kecil dan underscore (_) untuk memisahkan kata-kata.
+
+3. Folder yang secara khusus disiapkan oleh Flutter untuk menjalankan aplikasi pada platform tertentu:
+   Folder-folder seperti `android/`, `ios/`, dan `web/` disediakan khusus oleh Flutter untuk mengembangkan aplikasi sesuai dengan platform tertentu (Android, iOS, dan web).
+
+4. Fungsi dari folder .dart_tools dan .idea:
+   Folder `.dart_tools/` digunakan oleh Dart SDK untuk menyimpan cache dan konfigurasi alat terkait dengan pengembangan Dart. Sementara `.idea/` adalah folder yang digunakan oleh IntelliJ IDEA atau Android Studio untuk menyimpan konfigurasi proyek.
+
+5. Cara membuka project Flutter menggunakan Visual Studio Code:
+   Anda bisa membuka project Flutter di Visual Studio Code dengan cara membuka aplikasi tersebut, lalu pilih "File" > "Open Folder" dan pilih folder project Flutter yang ingin Anda buka.
+
+6. Alasan memastikan Android SDK terinstall untuk menjalankan aplikasi Flutter di sistem operasi Android:
+   Android SDK diperlukan untuk mengkompilasi dan menjalankan aplikasi Flutter di sistem operasi Android karena Flutter membutuhkan akses ke alat dan SDK Android.
+
+7. Langkah-langkah untuk mengatasi masalah "Android Toolchain error" pada perintah flutter doctor:
+   Anda dapat mengatasi masalah "Android Toolchain error" dengan memastikan Android SDK telah terinstal dan lokasinya telah ditambahkan ke PATH environment variable, dan juga dengan menginstal Android SDK Command-line tools.
+
+8. Cara menambahkan Android SDK Command-line tools melalui Android Studio:
+   Untuk menambahkan Android SDK Command-line tools melalui Android Studio, buka Android Studio, lalu pilih "Configure" > "SDK Manager", pilih tab "SDK Tools", dan centang kotak "Android SDK Command-line tools" untuk menginstalnya.
+
+9. Fungsi dari file .gitignore dalam struktur folder Flutter:
+   File `.gitignore` menentukan file dan folder yang harus diabaikan oleh Git, seperti file cache atau file sementara yang dihasilkan oleh sistem lainnya.
+
+10. Alasan mengapa file pubspec.yaml sangat penting dalam pengembangan aplikasi Flutter:
+    File `pubspec.yaml` adalah file konfigurasi utama dalam proyek Flutter, yang berisi dependensi paket, konfigurasi proyek, dan sumber daya lainnya yang diperlukan oleh aplikasi Flutter Anda.
+
+11. Widget dalam konteks Flutter:
+    Widget dalam Flutter adalah kelas yang digunakan untuk membangun antarmuka pengguna aplikasi, termasuk elemen visual seperti tombol, teks, gambar, dan layout yang lebih kompleks.
+
+12. Pewarisan (inheritance) dalam pembuatan widget Flutter:
+    Pewarisan digunakan dalam pembuatan widget Flutter untuk mengelompokkan dan memisahkan logika serta tampilan. Ini memungkinkan pembuatan widget baru dengan memanfaatkan fitur-fitur yang sudah ada.
+
+13. Peran widget MaterialApp dalam pembuatan aplikasi Flutter:
+    MaterialApp adalah widget yang menyediakan struktur dasar dari aplikasi Flutter, termasuk tema, navigasi, dan konfigurasi lainnya.
+
+14. Alasan menggunakan runApp untuk menjalankan aplikasi Flutter:
+    Fungsi `runApp` digunakan untuk menginisialisasi dan menjalankan aplikasi Flutter, dengan memasukkan widget utama dari aplikasi ke dalam hierarki widget.
+
+15. Kegunaan widget Scaffold dalam struktur aplikasi Flutter:
+    Scaffold digunakan untuk membuat layout dasar aplikasi Flutter, termasuk app bar, body, dan komponen lainnya.
+
+16. Cara menambahkan app bar dan body pada widget Scaffold:
+    Anda dapat menambahkan app bar menggunakan properti `appBar`, dan body menggunakan properti `body` pada widget Scaffold.
+
+17. Perbedaan antara Stateless Widget dan Stateful Widget:
+    Stateless Widget adalah widget yang tidak memiliki state internal, sementara Stateful Widget adalah widget yang memiliki state internal dan dapat berubah selama aplikasi berjalan.
+
+18. Alasan Stateful Widget disebut memiliki state internal:
+    Stateful Widget disebut memiliki state internal karena mereka memiliki objek state yang terkait dengannya, dan perubahan pada state ini mempengaruhi tampilan widget.
+19. import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Hello World App'),
+        ),
+        body: Center(
+          child: Text(
+            'Hello, World!',
+            style: TextStyle(fontSize: 24),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+20. import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: Scaffold(
+          appBar: AppBar(
+            title: const Text('Coding Flutter'),
+          ),
+          body: const ChangeTimeWidget(),
+        ));
+  }
+}
+
+class ChangeTimeWidget extends StatefulWidget {
+  const ChangeTimeWidget({super.key});
+
+  @override
+  State<ChangeTimeWidget> createState() => _ChangeTimeWidgetState();
+}
+
+class _ChangeTimeWidgetState extends State<ChangeTimeWidget> {
+  DateTime time = DateTime.now();
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Text('Jam Sekarang: $time'),
+        ElevatedButton(
+          onPressed: () {
+            setState(() {
+              time = DateTime.now();
+            });
+          },
+          child: const Text('Perbarui Waktu'),
+        ),
+      ],
+    );
+  }
+}   
+Untuk susunan class nya seperti diatas. Class ini memiliki variable time dan valuenya dapat diganti ketika klik button, setelah itu text akan di set ulang menggunakan DateTime.now(), karena terdapat setState di situ, maka widget build akan di run ulang yang akhirnya menciptakan tampilan baru dengan data yang baru.
